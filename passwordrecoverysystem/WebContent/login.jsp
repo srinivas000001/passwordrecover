@@ -7,7 +7,7 @@
 <title>Login Page</title>
 </head>
 <body>
-<form action="login" method="post">
+<form action="login1.jsp" method="post">
 		<table style="with: 50%">
 
 			<tr>

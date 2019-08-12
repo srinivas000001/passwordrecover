@@ -31,7 +31,7 @@ public static int save(User u){
 	return status;
 }
 
-public static User checkUser(String uname, String pwd){
+public static boolean checkUser(String uname, String pwd){
 	User u=null;
 	try{
 		Connection con=getConnection();
@@ -41,9 +41,15 @@ public static User checkUser(String uname, String pwd){
 		ResultSet rs=ps.executeQuery();
 		if(rs.next())
 		{
-		     return u;
+		     return true;
+		}
+		else
+		{
+			return false;
+			
 		}
 	}catch(Exception e){System.out.println(e);}
-	return u;
+	return false;
+	
 }
 }
